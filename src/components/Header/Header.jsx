@@ -3,9 +3,9 @@ import { assets } from "../../assets/assets";
 
 const Header = () => {
   return (
-    <div className="flex flex-row mt-8 mb-32 justify-center">
-      <div>
-        <img src={assets.food_1} alt="" />
+    <div className="flex flex-col sm:flex-row mt-8 mb-32 justify-center items-center">
+      <div className="hidden sm:block">
+        <img src={assets.food_1} alt="Food" className="" />
       </div>
       <div className="bg-pink-100 p-10">
         <h2 className="font-libreBaskerville pt-4 text-4xl pb-6">

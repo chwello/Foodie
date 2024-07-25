@@ -45,7 +45,7 @@ const ExploreRecipe = ({category,setCategory}) => {
         })}
       </div>
 
-      <hr className=" mt-2 w-auto border-t-2 border-gray-300" />
+      <hr className=" mt-2 w-auto border-t-1 border-gray-200" />
     </div>
   );
 };

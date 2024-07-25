@@ -20,6 +20,7 @@ import recipepage_3 from "./recipepage_3.jpeg"
 import recipepage_4 from "./recipepage_4.jpeg"
 
 import jennie_profile from "./jennie_profile.png"
+import hamburger_icon from "./hamburger_icon.svg"
 export const assets = {
   admin_logo,
   add_image,
@@ -36,7 +37,8 @@ export const assets = {
   recipepage_2,
   recipepage_3,
   recipepage_4,
-  jennie_profile
+  jennie_profile,
+  hamburger_icon
 }
 
 //category
