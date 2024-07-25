@@ -16,13 +16,13 @@ const Navbar = ({setShowLogin}) => {
 >
   Home
 </Link>
-<li
-  onClick={() => setMenu("menu")}
-  className={menu === "menu" ? "active" : ""}
-  style={menu === "menu" ? { color: '#C43720', fontWeight: 'bold', cursor: 'pointer' } : { cursor: 'pointer' }}
+<Link to='/recipelist'
+  onClick={() => setMenu("recipe")}
+  className={menu === "recipe" ? "active" : ""}
+  style={menu === "recipe" ? { color: '#C43720', fontWeight: 'bold', cursor: 'pointer' } : { cursor: 'pointer' }}
 >
-  Menu
-</li>
+  Recipe
+</Link>
 <Link to='/favorites'
   onClick={() => setMenu("favorites")}
   className={menu === "favorites" ? "active" : ""}

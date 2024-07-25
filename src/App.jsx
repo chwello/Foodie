@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Favorites from "./pages/Favorites/Favorites";
 import Login from "./components/Login/Login";
+import Recipe from "./pages/Recipe/Recipe";
 
 
 import RecipeDisplay from "./components/RecipeDisplay/RecipeDisplay";
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/recipe/:id" element={<RecipeDisplay />} />
+        <Route path="/recipelist" element ={<Recipe/>}/>
       </Routes>
     </div>
   );
