@@ -14,6 +14,12 @@ import share from "./share.svg"
 import cross from "./cross.svg"
 import active_bookmark from "./active_bookmark.svg"
 
+import recipepage_1 from "./recipepage_1.jpeg"
+import recipepage_2 from "./recipepage_2.jpeg"
+import recipepage_3 from "./recipepage_3.jpeg"
+import recipepage_4 from "./recipepage_4.jpeg"
+
+import jennie_profile from "./jennie_profile.png"
 export const assets = {
   admin_logo,
   add_image,
@@ -25,7 +31,12 @@ export const assets = {
   share,
   food_1,
   cross,
-  active_bookmark
+  active_bookmark,
+  recipepage_1,
+  recipepage_2,
+  recipepage_3,
+  recipepage_4,
+  jennie_profile
 }
 
 //category
