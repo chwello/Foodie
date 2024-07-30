@@ -38,7 +38,8 @@ export const assets = {
   recipepage_3,
   recipepage_4,
   jennie_profile,
-  hamburger_icon
+  hamburger_icon,
+  
 }
 
 //category

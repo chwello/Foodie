@@ -20,7 +20,7 @@ const Header = () => {
           view more
         </button>
       </div>
-      
+      <div></div>
     </div>
   );
 };
