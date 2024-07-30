@@ -139,7 +139,7 @@ const Navbar = ({ setShowLogin }) => {
         <li>
           <button
             onClick={() => setShowLogin(true)}
-            className="px-4 py-2 border border-black text-black rounded-md hover:bg-black hover:text-white w-full text-left"
+            className=" text-black rounded-md hover:bg-black hover:text-white text-left"
           >
             Sign in
           </button>
