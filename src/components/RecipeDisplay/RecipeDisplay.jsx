@@ -15,7 +15,7 @@ const RecipeDisplay = () => {
   return (
     <div className="mx-4 sm:mx-10 md:mx-20 lg:mx-36">
       <div className="flex flex-col lg:flex-row justify-between mt-10 lg:mt-40 lg:gap-32 gap-6 w-full">
-        <div className="">
+        <div>
           <h2 className="font-poppins text-2xl lg:text-3xl font-bold">
             {recipeItem.name}
           </h2>
