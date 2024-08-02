@@ -17,10 +17,10 @@ const Recipe = () => {
             alt="Emerald Harmony Cake"
             className="w-full h-full object-cover rounded-md"
           />
-          <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 text-white text-sm sm:text-xl font-medium font-libreCaslonText px-2 rounded-md z-10">
+          <div className="absolute bottom-10 sm:bottom-10 left-2 sm:left-4 text-white text-sm sm:text-xl font-medium font-libreCaslonText px-2 rounded-md ">
             Emerald Harmony Cake
           </div>
-          <div className="absolute bottom-1 sm:bottom-2 left-2 sm:left-4 flex items-center gap-2 z-10">
+          <div className=" absolute bottom-4 sm:bottom-4 left-2 sm:left-4 flex items-center gap-2">
             <img
               src={assets.jennie_profile}
               alt="Profile"

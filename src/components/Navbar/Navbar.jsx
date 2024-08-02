@@ -81,7 +81,7 @@ const Navbar = ({ setShowLogin }) => {
 
       {/* Mobile Menu */}
       <ul
-        className={`absolute top-16 left-auto pl-10 right-0 bg-white border-t border-gray-300 md:hidden ${
+        className={`absolute top-16 left-auto pl-10 right-0 bg-white border-t border-gray-300 md:hidden z-10 ${
           isMenuOpen ? "block" : "hidden"
         }`}
       >
