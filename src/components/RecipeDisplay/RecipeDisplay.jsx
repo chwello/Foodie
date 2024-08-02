@@ -12,17 +12,21 @@ const RecipeDisplay = () => {
     return <div>Food item not found</div>;
   }
   return (
-    <div className="mx-36">
-      <div className="flex flex-row justify-center mt-40 gap-32 items-center">
-        <div>
-          <h2 className="font-poppins text-3xl font-bold">{recipeItem.name}</h2>
-        </div>
-        <div className="flex gap-6 items-center">
-          <img className="" src={assets.bookmark_icon} alt="" />
-          <img src={assets.share} alt="" />
+    <div className="mx-4 sm:mx-10 md:mx-20 lg:mx-36">
+      <div className="flex flex-col lg:flex-row justify-between mt-10 lg:mt-40 lg:gap-32 gap-6 w-full">
+        <div className="">
+          <h2 className="font-poppins text-2xl lg:text-3xl font-bold">
+            {recipeItem.name}
+          </h2>
+          <div className="flex-shrink-0 flex gap-4 items-center mt-4 lg:mt-0">
+            <img src={assets.bookmark_icon} alt="Bookmark" />
+            <img src={assets.share} alt="Share" />
+          </div>
+         
         </div>
       </div>
-      <div className="flex items-center mt-10 mb-10 gap-4">
+
+      <div className="flex items-center mt-6 lg:mt-10 mb-10 gap-4">
         <img className="w-12 h-12 ml-4" src={assets.profile} alt="" />
         <p className="font-poppins font-medium">Ben "The Hosk" Hosking</p>
       </div>
@@ -61,7 +65,7 @@ const RecipeDisplay = () => {
         </div>
       </div>
       <div className="mt-20 mb-14">
-        <p className="font-libreBaskerville font-bold text-3xl">
+        <p className="font-libreBaskerville font-bold text-2xl lg:text-3xl">
           Got feedback? We’d love to hear from you!
         </p>
       </div>
@@ -76,15 +80,18 @@ const RecipeDisplay = () => {
 
       <div className="flex items-center mt-16 mb-6">
         <img className="w-10 h-10" src={assets.profile} alt="" />
-        <h2 className="font-medium text-sm font-poppins ml-3">Ben "The Hosk" Hosking</h2>
+        <h2 className="font-medium text-sm font-poppins ml-3">
+          Ben "The Hosk" Hosking
+        </h2>
         <small className="ml-4 font-poppins text-gray-500">22 min</small>
       </div>
       <div className=" mb-10">
-      <p className="font-poppins text-sm">I tried the chocolate cake recipe, and it was fantastic! The instructions
-      were clear, and the cake turned out moist and delicious. Definitely a keeper!</p>
+        <p className="font-poppins text-sm">
+          I tried the chocolate cake recipe, and it was fantastic! The
+          instructions were clear, and the cake turned out moist and delicious.
+          Definitely a keeper!
+        </p>
       </div>
-     
-     
     </div>
   );
 };
