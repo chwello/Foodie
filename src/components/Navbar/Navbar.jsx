@@ -85,7 +85,7 @@ const Navbar = ({ setShowLogin }) => {
           isMenuOpen ? "block" : "hidden"
         }`}
       >
-        <li>
+        <li className="mt-4 mb-2">
           <Link
             to="/"
             onClick={() => {
@@ -102,7 +102,7 @@ const Navbar = ({ setShowLogin }) => {
             Home
           </Link>
         </li>
-        <li>
+        <li className="mb-2">
           <Link
             to="/recipelist"
             onClick={() => {
@@ -119,7 +119,7 @@ const Navbar = ({ setShowLogin }) => {
             Recipe
           </Link>
         </li>
-        <li>
+        <li className="mb-2">
           <Link
             to="/favorites"
             onClick={() => {
@@ -136,7 +136,7 @@ const Navbar = ({ setShowLogin }) => {
             Favorites
           </Link>
         </li>
-        <li>
+        <li className="mb-2">
           <button
             onClick={() => setShowLogin(true)}
             className=" text-black rounded-md hover:bg-black hover:text-white text-left"

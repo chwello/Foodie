@@ -4,7 +4,7 @@ import { menu_list } from "../../assets/assets";
 const ExploreRecipe = ({ category, setCategory }) => {
   const [menu, setMenu] = useState("All");
 
-  const handleClick = (item) => {
+ const handleClick = (item) => {
     setMenu(item.menu_name);
     setCategory((prev) => (prev === item.menu_name ? "All" : item.menu_name));
   };

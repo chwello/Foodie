@@ -3,8 +3,10 @@ import { assets } from "../../assets/assets";
 import FoodItem from "../../components/Fooditem/FoodItem";
 import { StoreContext } from "../../context/StoreContext";
 
+
 const Recipe = () => {
   const { food_list } = useContext(StoreContext);
+  const { favitems, addToFavorite, removeFromFav } = useContext(StoreContext);
 
   return (
     <div className="px-4 sm:px-8 lg:px-14 py-4">

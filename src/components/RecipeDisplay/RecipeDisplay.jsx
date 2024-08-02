@@ -7,6 +7,7 @@ const RecipeDisplay = () => {
   const { food_list } = useContext(StoreContext);
   const { id } = useParams();
   const recipeItem = food_list.find((item) => item._id === id);
+  const { favitems, addToFavorite, removeFromFav } = useContext(StoreContext);
 
   if (!recipeItem) {
     return <div>Food item not found</div>;
@@ -19,10 +20,29 @@ const RecipeDisplay = () => {
             {recipeItem.name}
           </h2>
           <div className="flex-shrink-0 flex gap-4 items-center mt-4 lg:mt-0">
-            <img src={assets.bookmark_icon} alt="Bookmark" />
+            {!favitems[id] ? (
+              <img
+                src={assets.bookmark_icon}
+                alt="Add to favorites"
+                className="w-6 h-6 cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  addToFavorite(id);
+                }}
+              />
+            ) : (
+              <img
+                src={assets.active_bookmark}
+                alt="Remove from favorites"
+                className="w-6 h-6 cursor-pointer filter-red"
+                onClick={(e) => {
+                  e.preventDefault();
+                  removeFromFav(id);
+                }}
+              />
+            )}
             <img src={assets.share} alt="Share" />
           </div>
-         
         </div>
       </div>
 
