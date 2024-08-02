@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { food_list } from "../../assets/assets";
 import { StoreContext } from "../../context/StoreContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { assets } from "../../assets/assets"; // Ensure correct path to assets
 
 const SearchPage = () => {
@@ -43,7 +43,7 @@ const SearchPage = () => {
             <div className="space-y-4">
               {results.map((item) => (
                 <div key={item.id} className="p-4 rounded-md">
-                  <Link to={`/recipe/${item.id}`} className="flex flex-row items-start p-4">
+                  <Link to={`/recipe/${item._id}`} className="flex flex-row items-start p-4">
                     <div className="w-40 sm:w-60">
                       <img src={item.image} alt={item.name} className="w-full h-full object-cover rounded-md" />
                     </div>
