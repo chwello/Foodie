@@ -8,17 +8,19 @@ import Recipe from "./pages/Recipe/Recipe";
 
 
 import RecipeDisplay from "./components/RecipeDisplay/RecipeDisplay";
+import SearchPage from "./components/SearchPage.jsx/SearchPage";
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   return (
     <div className="w-4/5 m-auto">
       {showLogin ? <Login setShowLogin={setShowLogin} /> : <></>}
-      <Navbar setShowLogin={setShowLogin} />
+      <Navbar setShowLogin={setShowLogin}/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/recipe/:id" element={<RecipeDisplay />} />
         <Route path="/recipelist" element ={<Recipe/>}/>
+        <Route path="/searchpage" element={<SearchPage/>}/>
       </Routes>
     </div>
   );

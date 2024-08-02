@@ -1,11 +1,33 @@
 import React, { useState } from "react";
-import { assets } from "../../assets/assets";
-import { Link } from "react-router-dom";
+import { assets, food_list } from "../../assets/assets";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Navbar = ({ setShowLogin }) => {
+  const [search, setSearch] = useState(false);
   const [menu, setMenu] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [searchItem, setSearchItem] = useState('');
+  const [filteredUsers, setFilteredUsers] = useState(food_list);
+
+  const navigate = useNavigate(); // Use useNavigate
+
+  const handleInputChange = (e) => {
+    const searchTerm = e.target.value;
+    setSearchItem(searchTerm);
+
+    const filteredItems = food_list.filter((item) =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    setFilteredUsers(filteredItems);
+  };
+
+  const handleSearchResultClick = (id) => {
+    setSearchItem('');
+    setFilteredUsers(food_list);
+    navigate(`/recipe/${id}`); // Navigate to the selected item's page
+  };
 
   return (
     <div className="relative flex justify-between items-center p-5 md:p-10">
@@ -14,7 +36,7 @@ const Navbar = ({ setShowLogin }) => {
       </Link>
 
       <div className="flex items-center md:hidden">
-        <img src={assets.search} alt="Search" className="cursor-pointer h-8" />
+       <Link to='/searchpage'><img src={assets.search} alt="Search" className="cursor-pointer h-8" /></Link> 
         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="ml-4">
           <img src={assets.hamburger_icon} alt="Menu" className="h-8" />
         </button>
@@ -65,11 +87,43 @@ const Navbar = ({ setShowLogin }) => {
             </Link>
           </li>
         </ul>
-        <input
-          type="search"
-          className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-gray-500 placeholder-gray-500"
-          placeholder="Search..."
-        />
+        <div className="relative">
+          <input
+            type="search"
+            value={searchItem}
+            onChange={handleInputChange}
+            className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-gray-500 placeholder-gray-500"
+            placeholder="Search..."
+          />
+
+          {searchItem && (
+            <ul className="absolute top-full left-0 mt-2 border border-gray-300 bg-white shadow-lg rounded-md w-full">
+              {filteredUsers.length > 0 ? (
+                <>
+                  {filteredUsers.map((item) => (
+                    <li
+                      key={item._id}
+                      className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center"
+                      onClick={() => handleSearchResultClick(item._id)}
+                    >
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="w-10 h-10 rounded-full mr-3"
+                      />
+                      <span>{item.name}</span>
+                    </li>
+                  ))}
+                  <li className="px-4 py-2 border-t border-gray-300 text-center text-hray-500 hover:text-[#C43720] cursor-pointer">
+                    <Link to="/recipelist">View All</Link>
+                  </li>
+                </>
+              ) : (
+                <li className="px-4 py-2 text-center text-gray-500">No results found</li>
+              )}
+            </ul>
+          )}
+        </div>
 
         <button
           onClick={() => setShowLogin(true)}

@@ -1,5 +1,6 @@
 import React from "react";
 import { assets } from "../../assets/assets";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -17,7 +18,7 @@ const Header = () => {
           make every meal a memorable experience.
         </p>
         <button className="font-poppins border border-solid border-black rounded-lg p-3 text-sm mt-4">
-          view more
+        <Link to="/recipelist">view more</Link>
         </button>
       </div>
       

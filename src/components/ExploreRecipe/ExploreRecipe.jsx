@@ -11,17 +11,17 @@ const ExploreRecipe = ({ category, setCategory }) => {
 
   return (
     <div id="explore-recipe" className="px-4 lg:px-0">
-      <h1 className="font-libreBaskerville text-2xl lg:text-3xl text-center lg:text-left">
+      <h1 className="font-libreBaskerville text-2xl lg:text-3xl lg:text-left">
         Explore different recipes here
       </h1>
 
-      <p className="font-poppins text-sm mt-6 text-center lg:text-left">
+      <p className="font-poppins text-sm mt-6  lg:text-left">
         Dive into a variety of cuisines, meal types, and dietary preferences to
         discover new favorites. Our goal is to satisfy your taste buds and make
         every meal a memorable experience.
       </p>
 
-      <div className="mt-6 flex flex-wrap justify-center lg:justify-start gap-4 lg:gap-10">
+      <div className="mt-6 flex flex-wrap lg:justify-start gap-4 lg:gap-10">
         {menu_list.map((item, index) => {
           return (
             <div
