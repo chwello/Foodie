@@ -10,13 +10,13 @@ const Navbar = ({ setShowLogin }) => {
   return (
     <div className="relative flex justify-between items-center p-5 md:p-10">
       <Link to="/">
-        <img src={assets.foodie} alt="Logo" />
+        <img src={assets.foodie} alt="Logo" className="h-8 md:h-6" />
       </Link>
 
       <div className="flex items-center md:hidden">
-        <img src={assets.search} alt="Search" className="cursor-pointer" />
+        <img src={assets.search} alt="Search" className="cursor-pointer h-8" />
         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="ml-4">
-          <img src={assets.hamburger_icon} alt="Menu" />
+          <img src={assets.hamburger_icon} alt="Menu" className="h-8" />
         </button>
       </div>
 
@@ -81,7 +81,7 @@ const Navbar = ({ setShowLogin }) => {
 
       {/* Mobile Menu */}
       <ul
-        className={`absolute top-16 left-0 right-0 bg-white border-t border-gray-300 md:hidden ${
+        className={`absolute top-16 left-auto pl-10 right-0 bg-white border-t border-gray-300 md:hidden ${
           isMenuOpen ? "block" : "hidden"
         }`}
       >
@@ -136,7 +136,7 @@ const Navbar = ({ setShowLogin }) => {
             Favorites
           </Link>
         </li>
-        <li className="mb-2">
+        <li className="mb-4">
           <button
             onClick={() => setShowLogin(true)}
             className=" text-black rounded-md hover:bg-black hover:text-white text-left"
