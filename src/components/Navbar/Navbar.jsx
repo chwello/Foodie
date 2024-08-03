@@ -10,7 +10,7 @@ const Navbar = ({ setShowLogin }) => {
   const [searchItem, setSearchItem] = useState('');
   const [filteredUsers, setFilteredUsers] = useState(food_list);
 
-  const navigate = useNavigate(); // Use useNavigate
+  const navigate = useNavigate(); 
 
   const handleInputChange = (e) => {
     const searchTerm = e.target.value;
@@ -26,7 +26,7 @@ const Navbar = ({ setShowLogin }) => {
   const handleSearchResultClick = (id) => {
     setSearchItem('');
     setFilteredUsers(food_list);
-    navigate(`/recipe/${id}`); // Navigate to the selected item's page
+    navigate(`/recipe/${id}`); 
   };
 
   return (
